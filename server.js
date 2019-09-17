@@ -5,6 +5,7 @@ const app=express();
 app.use(express.json());
 app.use(express.urlencoded({extend:true}));
 app.use(cookieparse());
+app.use(express.static("public"));
 app.get("/",(req,res) =>{
     console.log(req.query);
    res.send("hello express");//write和end方法的结合，res原本没有send方法
